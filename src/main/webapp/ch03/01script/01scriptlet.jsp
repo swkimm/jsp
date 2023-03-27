@@ -14,6 +14,9 @@
 String b = "h1";
 %>
 
+<h1>Lorem ipsum.</h1>
+<h1>Tempora ullam.</h1>
+
 <p>자바 코드 작성 가능 </p>
 
 <% 
