@@ -7,9 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/jsp/ch03/lecture/06form/18actionto.jsp">
-		<input type="text" name="query" />
-		<input type="submit" value="검색" />
+	<h1>19from.jsp</h1>
+	<form action="20to.jsp">
+	<input type="text" name="param1"/>
+	<input type="submit" value="전송" />
 	</form>
 </body>
 </html>

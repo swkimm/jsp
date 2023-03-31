@@ -7,9 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/jsp/ch03/lecture/06form/18actionto.jsp">
-		<input type="text" name="query" />
-		<input type="submit" value="검색" />
-	</form>
+	
+	<h1>5번 파일</h1>
+	
+	<%= request.getParameter("address") %>
+	<hr />
+	
+	<%@ include file="06sub.jsp" %>
+	
 </body>
 </html>

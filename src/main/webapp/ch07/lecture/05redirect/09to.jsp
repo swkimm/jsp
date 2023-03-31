@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.util.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,9 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/jsp/ch03/lecture/06form/18actionto.jsp">
-		<input type="text" name="query" />
-		<input type="submit" value="검색" />
-	</form>
+	<h1>9번 파일</h1>
+	<h1>name 파라미터 : <%= request.getParameter("name") %></h1>
+	<h1>address 파라미터 : <%= request.getParameter("address") %></h1>
 </body>
 </html>

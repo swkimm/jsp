@@ -7,9 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/jsp/ch03/lecture/06form/18actionto.jsp">
-		<input type="text" name="query" />
-		<input type="submit" value="검색" />
-	</form>
+	<h1>1번 파일 상단</h1>
+	
+	<!-- include action tag -->
+	<jsp:include page="02sub.jsp" />
+	
+	<h1>1번 파일 하단</h1>
 </body>
 </html>

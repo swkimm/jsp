@@ -7,9 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/jsp/ch03/lecture/06form/18actionto.jsp">
-		<input type="text" name="query" />
-		<input type="submit" value="검색" />
-	</form>
+	<h1>11번 파일</h1>
+
+	<!-- 코드 작성  -->
+	<% 
+		Object o1 = new Object();
+		request.setAttribute("abc", o1);
+	%>
+
+
+	<jsp:include page="12sub.jsp"></jsp:include>
+
 </body>
 </html>

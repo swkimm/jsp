@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,9 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/jsp/ch03/lecture/06form/18actionto.jsp">
-		<input type="text" name="query" />
-		<input type="submit" value="검색" />
-	</form>
+	<%
+	int number = 10;
+	%>
+
+	<%@ include file="includee.jsp"%>
+	<%-- 공통변수 DATAFOLDER = "<%=dataFolder%>" --%>
 </body>
 </html>

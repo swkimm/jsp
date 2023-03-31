@@ -7,9 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/jsp/ch03/lecture/06form/18actionto.jsp">
-		<input type="text" name="query" />
-		<input type="submit" value="검색" />
-	</form>
+
+	<h1>3번 파일</h1>
+	
+	<!-- jsp:param request 객체에 parameter 추가 -->
+	<jsp:include page="04sub.jsp">
+		<jsp:param value="value1" name="param1"></jsp:param>
+	</jsp:include>
+
 </body>
 </html>

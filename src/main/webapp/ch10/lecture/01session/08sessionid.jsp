@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.util.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,9 +8,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/jsp/ch03/lecture/06form/18actionto.jsp">
-		<input type="text" name="query" />
-		<input type="submit" value="검색" />
-	</form>
+	<h1>세션 아이디 보기</h1>
+	<h1><%= session.getId() %></h1>
+	<h1><%= session.isNew() %></h1>
+	
+	<hr />
+	
+	<a href="09invalidate.jsp">세션 파기하기</a>
 </body>
 </html>
