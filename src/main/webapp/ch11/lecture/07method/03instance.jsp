@@ -14,12 +14,12 @@
 	
 	int myNum = 1;
 	
-	pageContext.setAttribute("myNum", 2)
+	pageContext.setAttribute("myNum", 2);
 	%>
-	<p><%= list.get(0) %></p>
-	<p>${mylist.get(0)}</p>
-	<p>${list.get(0)}</p>
-	<p>${mylist.get(myNum) }</p>
+	<p>1,<%= list.get(0) %></p>
+	<p>2,${mylist.get(0)}</p>
+	<p>3,${list.get(0)}</p>
+	<p>4,${mylist.get(myNum) }</p>
 </body>
 </html>
 
