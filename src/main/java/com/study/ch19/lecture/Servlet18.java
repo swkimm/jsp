@@ -1,23 +1,23 @@
-package com.study.ch17.lecture;
+package com.study.ch19.lecture;
 
 import java.io.IOException;
-import java.util.*;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Servlet11
+ * Servlet implementation class Servlet18
  */
-@WebServlet("/lec/sample11")
-public class Servlet11 extends HttpServlet {
+@WebServlet("/lec/sample18")
+public class Servlet18 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Servlet11() {
+    public Servlet18() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -27,29 +27,16 @@ public class Servlet11 extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		System.out.println("18번 서블릿 일함");
+		response.getWriter().println("18th Servlet working");
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// get request parameter
-		String indexStr = request.getParameter("index");
-		String name = request.getParameter("name");
-		int index = Integer.parseInt(indexStr);
-		
-		// business logic
-		HttpSession session = request.getSession();
-		List<String> db = (List<String>) session.getAttribute("db");
-		db.set(index, name);
-		
-		// add attribute
-		
-		// forward / redirect
-		String location = request.getContextPath() + "/lec/sample10";
-		response.sendRedirect(location);
-	
+		// TODO Auto-generated method stub
+		doGet(request, response);
 	}
 
 }

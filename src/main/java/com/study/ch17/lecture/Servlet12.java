@@ -8,16 +8,16 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
 /**
- * Servlet implementation class Servlet11
+ * Servlet implementation class Servlet12
  */
-@WebServlet("/lec/sample11")
-public class Servlet11 extends HttpServlet {
+@WebServlet("/lec/sample12")
+public class Servlet12 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Servlet11() {
+    public Servlet12() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,20 +34,20 @@ public class Servlet11 extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// get request parameter
-		String indexStr = request.getParameter("index");
-		String name = request.getParameter("name");
-		int index = Integer.parseInt(indexStr);
+		// 삭제 
 		
-		// business logic
+		// 1. request 파라미터 얻기
+		int index = Integer.parseInt(request.getParameter("index"));
+		
+		// 2. business logic 처리(삭제 처리) 
 		HttpSession session = request.getSession();
-		List<String> db = (List<String>) session.getAttribute("db");
-		db.set(index, name);
+		List<String> list = (List<String>) session.getAttribute("db");
+		list.remove(index);
 		
-		// add attribute
+		// 3. add attribute
 		
-		// forward / redirect
-		String location = request.getContextPath() + "/lec/sample10";
+		// 4. forward / redirect
+		String location = request.getContextPath() + "/lec/sample09";
 		response.sendRedirect(location);
 	
 	}
